@@ -2,6 +2,16 @@
     &__item {
         & > img {
             object-fit: cover;
+
+            @media screen and (max-width: 768px) {
+                border-radius: 10px;
+                height: inherit;
+            }
+        }
+        
+        @media screen and (max-width: 768px) {
+            padding: 0 15px;
+            height: inherit;
         }
     }
 
@@ -36,6 +46,12 @@
 
         &:hover {
             background-image: url("../images/arrow-next-hover.svg");    
+        }
+    }
+
+    .swiper {
+        @media screen and (max-width: 768px) {
+            height: 450px;
         }
     }
  }

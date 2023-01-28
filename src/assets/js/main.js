@@ -49,9 +49,17 @@ function handleClick(question) {
 }
 
 // mobile nav
-const menuBtn = document.querySelector(".mobile-nav__btn");
-const menu = document.querySelector(".mobile-nav__sidebar");
+const menuOpenBtn = document.querySelector(".mobile-nav__btn");
+const menuCloseBtn = document.querySelector(".mobile-nav__close-btn");
+const overlay = document.querySelector(".mobile-nav__overlay");
+const mainPage = document.querySelector(".page");
 
-menuBtn.addEventListener("click", () => {
-    menu.classList.add("mobile-nav__sidebar_opened");
+menuOpenBtn.addEventListener("click", () => {
+    overlay.classList.add("mobile-nav__overlay_opened");
+    mainPage.classList.add("page_mobile-menu-opened");
+})
+
+menuCloseBtn.addEventListener("click", () => {
+    overlay.classList.remove("mobile-nav__overlay_opened");
+    mainPage.classList.remove("page_mobile-menu-opened");
 })

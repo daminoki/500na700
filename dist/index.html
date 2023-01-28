@@ -63,25 +63,30 @@
             <button class="mobile-nav__btn" aria-label="menu-button">
                 <img src="./assets/images/menu-btn-closed.svg" alt="menu">
             </button>
-            <nav class="mobile-nav__sidebar">
-                <ul>
-                    <li>
-                        <a href="">Пункт 1</a>
-                    </li>
-                    <li>
-                        <a href="">Пункт 2</a>
-                    </li>
-                    <li>
-                        <a href="">Пункт 3</a>
-                    </li>
-                    <li>
-                        <a href="">Пункт 4</a>
-                    </li>
-                    <li>
-                        <a href="">Пункт 5</a>
-                    </li>
-                </ul>
-            </nav>
+            <div class="mobile-nav__overlay">
+                <nav class="mobile-nav__sidebar">
+                    <button class="mobile-nav__close-btn">
+                        <img src="./assets/images/close-btn.svg" width="32" height="28" alt="Close button">
+                    </button>
+                    <ul>
+                        <li>
+                            <a class="mobile-nav__list-item" href="#">Пункт 1</a>
+                        </li>
+                        <li>
+                            <a class="mobile-nav__list-item" href="#">Пункт 2</a>
+                        </li>
+                        <li>
+                            <a class="mobile-nav__list-item" href="#">Пункт 3</a>
+                        </li>
+                        <li>
+                            <a class="mobile-nav__list-item" href="#">Пункт 4</a>
+                        </li>
+                        <li>
+                            <a  class="mobile-nav__list-item" href="#">Пункт 5</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </header>
     <main>
@@ -178,8 +183,8 @@
                     <div class="subscribe__form-wrapper">
                         <input class="subscribe__form-input" type="email" name="email" placeholder="Email" required>
                         <input class="subscribe__form-input" type="tel" name="tel" placeholder="Телефон" required>
-                        <input class="subscribe__form-input" type="date" name="date" placehodler="11.02.2022" required>
-                        <input class="subscribe__form-input" type="time" name="time" placeholder="15:00" required>
+                        <input class="subscribe__form-input" type="date" name="date" required>
+                        <input class="subscribe__form-input" type="time" name="time" required>
                     </div>
                     <button class="subscribe__form-submit-btn" type="submit">Подписаться</button>   
             </form>

@@ -2,4 +2,8 @@
     font-family: "Inter", Verdana, sans-serif;
     color: var(--primary-text-color);
     background-color: var(--primary-bg-color);
+
+    &_mobile-menu-opened {
+        overflow: hidden;
+    }
 }

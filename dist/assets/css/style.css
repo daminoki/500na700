@@ -80,6 +80,10 @@ p, h1, h2, h3, h4, h5, h6 {
     background-color: var(--primary-bg-color);
 }
 
+.page_mobile-menu-opened {
+    overflow: hidden;
+}
+
 .header {
     position: sticky;
     top: 0;
@@ -130,20 +134,61 @@ p, h1, h2, h3, h4, h5, h6 {
     }
 }
 
+.mobile-nav__overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100vh;
+    position: absolute;
+    inset: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.1s ease-in-out, visibility 0.3s ease-in-out;
+    z-index: 110;
+}
+
+.mobile-nav__overlay_opened {
+    visibility: visible;
+    opacity: 1;
+}
+
+.mobile-nav__overlay_opened .mobile-nav__sidebar {
+    transform: translateX(0%);
+}
+
 .mobile-nav__btn {
     background: none;
     border: none;
+    cursor: pointer;
+    z-index: 130;
 }
 
 .mobile-nav__sidebar {
-    display: none;
-    height: 100%;
+    display: flex;
+    flex-direction: column;
     width: 250px;
     background-color: var(--primary-bg-color);
+    position: fixed;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    width: 250px;
+    z-index: 120;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    padding: 45px 20px 60px 50px;
+    overflow: auto;
 }
 
-.mobile-nav__sidebar_opened {
-    display: block;
+.mobile-nav__close-btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+    margin-left: auto;
+}
+
+.mobile-nav__list-item {
+    color: var(--primary-text-color);
+    text-decoration: none;
 }
 
 .nav-list {
@@ -214,6 +259,20 @@ p, h1, h2, h3, h4, h5, h6 {
     object-fit: cover;
 }
 
+@media screen and (max-width: 768px) {
+    .gallery__item > img {
+        border-radius: 10px;
+        height: inherit;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .gallery__item {
+        padding: 0 15px;
+        height: inherit;
+    }
+}
+
 .gallery__button-wrapper {
     display: flex;
     gap: 32px;
@@ -245,6 +304,12 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .gallery__button-next:hover {
     background-image: url("../images/arrow-next-hover.svg");
+}
+
+@media screen and (max-width: 768px) {
+    .gallery .swiper {
+        height: 450px;
+    }
 }
 
 .questions {

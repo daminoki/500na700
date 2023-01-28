@@ -5,19 +5,60 @@
         display: block;
     }
 
+    &__overlay {
+        background-color: rgba(0,0,0,.5);
+        height: 100vh;
+        position: absolute;
+        inset: 0;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.1s ease-in-out,visibility 0.3s ease-in-out;
+        z-index: 110;
+
+        &_opened {
+            visibility: visible;
+            opacity: 1;
+
+            .mobile-nav__sidebar {
+                transform: translateX(0%);
+            }
+        }
+    }
+
     &__btn {
         background: none;
         border: none;
+        cursor: pointer;
+        z-index: 130;
     }
 
     &__sidebar {
-        display: none;
-        height: 100%;
+        display: flex;
+        flex-direction: column;
         width: 250px;
         background-color: var(--primary-bg-color);
+        position: fixed;
+        bottom: 0;
+        top: 0;
+        right: 0;
+        width: 250px;
+        z-index: 120;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        padding: 45px 20px 60px 50px;
+        overflow: auto;
+    }
 
-        &_opened {
-            display: block;
-        }
+    &__close-btn {
+        border: none;
+        background: none;
+        cursor: pointer;
+        margin-bottom: 20px;
+        margin-left: auto;
+    }
+
+    &__list-item {
+        color: var(--primary-text-color);
+        text-decoration: none;
     }
 }
