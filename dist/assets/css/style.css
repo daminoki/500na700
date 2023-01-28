@@ -1,0 +1,390 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+    margin: 0;
+}
+
+/*
+  3. Allow percentage-based heights in the application
+*/
+html {
+    height: 100%;
+}
+
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/*
+  6. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+/*
+  7. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+    font: inherit;
+}
+
+ul, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+  8. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root, #__next {
+    isolation: isolate;
+}
+
+:root {
+    --primary-text-color: #fff;
+    --secondary-text-color: #0B0A0D;
+    --primary-bg-color: #0B0A0D;
+    --secondary-bg-color: #fff;
+    --tertiatry-bg-color: #312F35;
+    --swiper-theme-color: #fff !important;
+    --primary-hover-color: #75FF72;
+}
+
+.page {
+    font-family: "Inter", Verdana, sans-serif;
+    color: var(--primary-text-color);
+    background-color: var(--primary-bg-color);
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    padding: 77px 100px;
+    background-color: var(--primary-bg-color);
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        justify-content: space-between;
+        padding: 15px 45px;
+    }
+}
+
+.header__nav {
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+    .header__nav {
+        display: none;
+    }
+}
+
+.header__nav-list {
+    display: flex;
+}
+
+.header__mobile-nav {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .header__mobile-nav {
+        display: block;
+    }
+}
+
+.nav-list {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-list__item {
+    padding: 25px 0;
+    border-bottom: 3px solid transparent;
+}
+
+.nav-list__item:hover {
+    border-color: #fff;
+}
+
+.nav-list__item:hover .nav-list__subnav {
+    display: block;
+}
+
+.nav-list__subnav {
+    position: absolute;
+    bottom: calc(-100% + 26px);
+    left: 0;
+    right: 0;
+    display: none;
+    padding: 75px 100px;
+    background: var(--primary-bg-color);
+    z-index: 1;
+}
+
+.nav-list__subnav-wrapper {
+    display: flex;
+    gap: 140px;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.nav-list__subnav-item {
+    margin-bottom: 30px;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-list__subnav-item:hover {
+    color: var(--primary-hover-color);
+}
+
+.nav-list__subnav-item:last-child {
+    margin-bottom: 0;
+}
+
+.gallery__item > img {
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.gallery__button-wrapper {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 55px;
+}
+
+.gallery__button-prev, .gallery__button-next {
+    width: 100px;
+    height: 24px;
+    background: none;
+    border: none;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.gallery__button-prev {
+    background-image: url("../images/arrow-prev.svg");
+}
+
+.gallery__button-prev:hover {
+    background-image: url("../images/arrow-prev-hover.svg");
+}
+
+.gallery__button-next {
+    background-image: url("../images/arrow-next.svg");
+}
+
+.gallery__button-next:hover {
+    background-image: url("../images/arrow-next-hover.svg");
+}
+
+.questions {
+    padding: 170px 100px 100px;
+    display: grid;
+    grid-template-columns: 0.15fr 1fr;
+    gap: 100px;
+}
+
+.questions__title {
+    font-size: 80px;
+    line-height: 1.2;
+    font-weight: 500;
+}
+
+.questions__wrapper {
+    padding-bottom: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.questions__wrapper:last-child {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.questions__wrapper_active {
+    border-top: 1px solid rgb(255, 255, 255);
+}
+
+.questions__question {
+    background-color: var(--primary-bg-color);
+    color: #fff;
+    cursor: pointer;
+    padding: 30px 0 0;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    font-size: 24px;
+    line-height: 1.5;
+}
+
+.questions__question_active {
+    padding-bottom: 30px;
+}
+
+.questions__answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.7s ease-out;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.questions__answer_visible {
+    max-height: 100px;
+}
+
+.news {
+    padding: 0 100px 100px;
+}
+
+.news__title {
+    font-size: 80px;
+    line-height: 1.2;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.news__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+}
+
+.news__image {
+    margin-bottom: 30px;
+}
+
+.news__subtitle {
+    margin-bottom: 10px;
+}
+
+.subscribe {
+    padding: 50px 100px;
+    color: var(--secondary-text-color);
+    background-color: var(--secondary-bg-color);
+}
+
+.subscribe__title {
+    font-size: 80px;
+    line-height: 1.2;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.subscribe__description {
+    font-size: 16px;
+    line-height: 1.2;
+    max-width: 400px;
+    margin-bottom: 20px;
+}
+
+.subscribe__form {
+    display: grid;
+    grid-template-columns: 400px 400px;
+    gap: 20px;
+}
+
+.subscribe__form_place {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.subscribe__form-input {
+    padding: 15px 20px;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+}
+
+.subscribe__form-input:focus {
+    outline: none;
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.subscribe__form-submit-btn {
+    cursor: pointer;
+    padding: 15px 20px;
+    background: none;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    width: -moz-fit-content;
+    width: fit-content;
+    transition: all 0.3s ease-in-out;
+}
+
+.subscribe__form-submit-btn:hover {
+    background: #75FF72;
+    border: 1px solid rgba(0, 0, 0, 0);
+}
+
+.footer {
+    padding: 50px 100px 80px;
+    background-color: #312F35;
+    display: flex;
+    gap: 120px;
+}
+
+.footer__wrapper {
+    max-width: 400px;
+}
+
+.footer__title {
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.footer__description {
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+.footer__link {
+    color: var(--primary-text-color);
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: 500;
+}
+
+.footer__socials {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    height: -moz-fit-content;
+    height: fit-content;
+}

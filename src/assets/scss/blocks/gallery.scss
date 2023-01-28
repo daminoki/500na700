@@ -1,0 +1,41 @@
+.gallery {
+    &__item {
+        & > img {
+            object-fit: cover;
+        }
+    }
+
+    &__button-wrapper {
+        display: flex;
+        gap: 32px;
+        align-items: center;
+        justify-content: center;
+        margin-top: 55px;
+    }
+
+    &__button-prev,
+    &__button-next {
+        width: 100px;
+        height: 24px;
+        background: none;
+        border: none;
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
+
+    &__button-prev {
+        background-image: url("../images/arrow-prev.svg");
+
+        &:hover {
+            background-image: url("../images/arrow-prev-hover.svg");    
+        }
+    }
+
+    &__button-next {
+        background-image: url("../images/arrow-next.svg");
+
+        &:hover {
+            background-image: url("../images/arrow-next-hover.svg");    
+        }
+    }
+ }

@@ -1,0 +1,38 @@
+.footer {
+    padding: 50px 100px 80px;
+    background-color: #312F35;
+    display: flex;
+    gap: 120px;
+
+    &__wrapper {
+        max-width: 400px;
+    }
+
+    &__title {
+        font-size: 16px;
+        line-height: 1.2;
+        font-weight: 500;
+        margin-bottom: 10px;
+    }
+
+    &__description {
+        font-size: 14px;
+        line-height: 1.5;
+        font-weight: 500;
+        margin-bottom: 25px;
+    }
+
+    &__link {
+        color: var( --primary-text-color);
+        font-size: 14px;
+        line-height: 1.2;
+        font-weight: 500;
+    }
+
+    &__socials {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+        height: fit-content;
+    }
+}

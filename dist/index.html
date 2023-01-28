@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <title>500na700</title>
+</head>
+<body class="page">
+    <header class="header">
+        <img src="./assets/images/logo.png" alt="logo" width="42" height="50" class="header__logo">
+
+        <nav class="header__nav">
+            <ul class="nav-list">
+                <li class="nav-list__item">
+                    Пункт 1
+                    <div class="nav-list__subnav">
+                        <div  class="nav-list__subnav-wrapper">
+                            <ul>
+                                <li class="nav-list__subnav-item">
+                                    Подпункт меню
+                                </li>
+                                <li class="nav-list__subnav-item">
+                                    Подпункт меню
+                                </li>
+                                <li class="nav-list__subnav-item">
+                                    Подпункт меню
+                                </li>
+                            </ul>
+                            <ul>
+                                <li class="nav-list__subnav-item">
+                                    Подпункт меню
+                                </li>
+                                <li class="nav-list__subnav-item">
+                                    Подпункт меню
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-list__item">
+                    Пункт 2
+                </li>
+                <li class="nav-list__item">
+                    Пункт 3
+                </li>
+                <li class="nav-list__item">
+                    Пункт 4
+                </li>
+                <li class="nav-list__item">
+                    Пункт 5
+                </li>
+            </ul>
+        </nav>
+
+        <div class="header__mobile-nav">
+            <button aria-label="menu-button">
+                <img src="" alt="menu">
+            </button>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="">Пункт 1</a>
+                    </li>
+                    <li>
+                        <a href="">Пункт 2</a>
+                    </li>
+                    <li>
+                        <a href="">Пункт 3</a>
+                    </li>
+                    <li>
+                        <a href="">Пункт 4</a>
+                    </li>
+                    <li>
+                        <a href="">Пункт 5</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="gallery">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="gallery__wrapper swiper-slide">
+                        <div class="gallery__item">
+                            <img src="./assets/images/slider-img.png" alt="Books" width="1240" height="650">
+                        </div>
+                    </div>
+                    <div class="gallery__wrapper swiper-slide">
+                        <div class="gallery__item">
+                            <img src="./assets/images/slider-img.png" alt="Books" width="1240" height="650">
+                        </div>
+                    </div>
+                    <div class="gallery__wrapper swiper-slide">
+                        <div class="gallery__item">
+                            <img src="./assets/images/slider-img.png" alt="Books" width="1240" height="650">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery__button-wrapper">
+                <button class="gallery__button-prev" aria-label="slider prev button"></button>
+                <button class="gallery__button-next" aria-label="slider  button"></button>
+            </div>
+        </section>
+
+        <section class="questions">
+            <h2 class="questions__title">FAQ</h2>
+            <div>
+                <div class="questions__wrapper">
+                    <button class="questions__question">Как добраться до музея?</button>
+                    <div class="questions__answer">
+                        <p>В Национальный музей Республики Татарстан можно добраться общественным транспортом: «Станция метро «Кремлевская», а затем по направлению к Кремлю пройдя 5 минут пешком;</p>
+                    </div>
+                </div>
+                <div class="questions__wrapper">
+                    <button class="questions__question">Есть ли поблизости удобная парковка?</button>
+                    <div class="questions__answer">
+                        <p>Описание Описание Описание Описание Описание Описание Описание Описание Описание Описание Описание Описание Описание </p>
+                    </div>
+                </div>
+                <div class="questions__wrapper">
+                    <button class="questions__question">Можно ли воспользоваться аудиогидом?</button>
+                    <div class="questions__answer">
+                        <p>Описание Описание Описание Описание Описание Описание Описание Описание Описание Описание Описание Описание Описание Описание Описание Описание </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="news">
+            <h2 class="news__title">Новости</h2>
+            <div class="news__wrapper">
+                <div class="news__card">
+                    <img class="news__image" src="./assets/images/news1.png" alt="News image">
+                    <h4 class="news__subtitle">Заголовок</h4>
+                    <p class="news__description">ОписаниОписание Описание  Описание Описание Описание  Описаниее</p>
+                </div>
+                <div class="news__card">
+                    <img class="news__image" src="./assets/images/news2.png" alt="News image">
+                    <h4 class="news__subtitle">Заголовок</h4>
+                    <p class="news__description">ОписаниОписание Описание  Описание Описание Описание  Описаниее</p>
+                </div>
+                <div class="news__card">
+                    <img class="news__image" src="./assets/images/news3.png" alt="News image">
+                    <h4 class="news__subtitle">Заголовок</h4>
+                    <p class="news__description">ОписаниОписание Описание  Описание Описание Описание  Описаниее</p>
+                </div>
+                <div class="news__card">
+                    <img class="news__image" src="./assets/images/news4.png" alt="News image">
+                    <h4 class="news__subtitle">Заголовок</h4>
+                    <p class="news__description">ОписаниОписание Описание  Описание Описание Описание  Описаниее</p>
+                </div>
+                <div class="news__card">
+                    <img class="news__image" src="./assets/images/news5.png" alt="News image">
+                    <h4 class="news__subtitle">Заголовок</h4>
+                    <p class="news__description">ОписаниОписание Описание  Описание Описание Описание  Описаниее</p>
+                </div>
+                <div class="news__card">
+                    <img class="news__image" src="./assets/images/news6.png" alt="News image">
+                    <h4 class="news__subtitle">Заголовок</h4>
+                    <p class="news__description">ОписаниОписание Описание  Описание Описание Описание  Описаниее</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="subscribe">
+            <h2 class="subscribe__title">Подпишись</h2>
+            <p class="subscribe__description">Отправляем анонсы новых статей, выпусков и трансляций</p>
+            <form class="subscribe__form" type="submit" autocomplete="off">
+                <div class="subscribe__form_place">
+                    <input class="subscribe__form-input" type="email" name="email" placeholder="Email" required>
+                    <input class="subscribe__form-input" type="tel" name="tel" placeholder="Телефон" required>
+                    <button class="subscribe__form-submit-btn" type="submit">Подписаться</button>   
+                </div>
+                <div class="subscribe__form_place">
+                    <input class="subscribe__form-input" type="date" name="date" placehodler="11.02.2022" required>
+                    <input class="subscribe__form-input" type="time" name="time" placeholder="15:00" required>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__wrapper">
+            <h4 class="footer__title">Заголовок</h4>
+            <p class="footer__description">ОписаниОписание Описание  Описание Описание Описание  Описаниее</p>
+            <a class="footer__link" href="https://500na700.ru" target="_blank">500na700.ru</a>
+        </div>
+        <ul class="footer__socials">
+            <li>
+                <a href="#">
+                    <img src="./assets/images/vk.svg" alt="Vk">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="./assets/images/facebook.svg" alt="Facebook">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="./assets/images/tik-tok.svg" alt="Tik-Tok">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="./assets/images/youtube.svg" alt="YouTube">
+                </a>
+            </li>
+        </ul>
+    </footer>
+    
+    <script type="module" src="assets/js/main.min.js"></script>
+</body>
+</html>
