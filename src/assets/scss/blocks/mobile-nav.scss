@@ -1,0 +1,23 @@
+.mobile-nav {
+    display: none;
+
+    @media screen and (max-width: 768px) {
+        display: block;
+    }
+
+    &__btn {
+        background: none;
+        border: none;
+    }
+
+    &__sidebar {
+        display: none;
+        height: 100%;
+        width: 250px;
+        background-color: var(--primary-bg-color);
+
+        &_opened {
+            display: block;
+        }
+    }
+}

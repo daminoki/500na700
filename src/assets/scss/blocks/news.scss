@@ -1,24 +1,50 @@
 .news {
     padding: 0 100px 100px;
 
+    @media screen and (max-width: 768px) {
+        padding: 0 15px 80px;
+    }
+
     &__title {
         font-size: 80px;
         line-height: 1.2;
         font-weight: 500;
         margin-bottom: 30px;
+
+        @media screen and (max-width: 768px) {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
     }
 
     &__wrapper {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 50px;
+
+        @media screen and (max-width: 900px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media screen and (max-width: 768px) {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+        }
     }
 
     &__image {
         margin-bottom: 30px;
+        object-fit: cover;
     }
 
     &__subtitle {
         margin-bottom: 10px;
+    }
+
+    &__card {
+        @media screen and (max-width: 768px) {
+            min-width: 200px;
+        }
     }
 }

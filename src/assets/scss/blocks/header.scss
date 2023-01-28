@@ -4,17 +4,24 @@
     z-index: 100;
     display: flex;
     align-items: center;
+    gap: 215px;
     padding: 77px 100px;
     background-color: var(--primary-bg-color);
 
+    @media screen and (max-width: 1024px) {
+        gap: 115px;
+    }
+
+    @media screen and (max-width: 900px) {
+        gap: 80px;
+    }
+
     @media screen and (max-width: 768px) {
         justify-content: space-between;
-        padding: 15px 45px;
+        padding: 35px 15px;
     }
 
     &__nav {
-        margin: 0 auto;
-
         @media screen and (max-width: 768px) {
             display: none;
         }
@@ -22,13 +29,5 @@
 
     &__nav-list {
         display: flex;
-    }
-
-    &__mobile-nav {
-        display: none;
-
-        @media screen and (max-width: 768px) {
-            display: block;
-        }
     }
 }

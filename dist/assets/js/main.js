@@ -47,3 +47,11 @@ function handleClick(question) {
         }
     })
 }
+
+// mobile nav
+const menuBtn = document.querySelector(".mobile-nav__btn");
+const menu = document.querySelector(".mobile-nav__sidebar");
+
+menuBtn.addEventListener("click", () => {
+    menu.classList.add("mobile-nav__sidebar_opened");
+})

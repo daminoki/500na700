@@ -59,11 +59,11 @@
             </ul>
         </nav>
 
-        <div class="header__mobile-nav">
-            <button aria-label="menu-button">
-                <img src="" alt="menu">
+        <div class="mobile-nav">
+            <button class="mobile-nav__btn" aria-label="menu-button">
+                <img src="./assets/images/menu-btn-closed.svg" alt="menu">
             </button>
-            <nav>
+            <nav class="mobile-nav__sidebar">
                 <ul>
                     <li>
                         <a href="">Пункт 1</a>
@@ -139,32 +139,32 @@
             <h2 class="news__title">Новости</h2>
             <div class="news__wrapper">
                 <div class="news__card">
-                    <img class="news__image" src="./assets/images/news1.png" alt="News image">
+                    <img class="news__image" src="./assets/images/news1.png" alt="News image" width="400px" height="264">
                     <h4 class="news__subtitle">Заголовок</h4>
                     <p class="news__description">ОписаниОписание Описание  Описание Описание Описание  Описаниее</p>
                 </div>
                 <div class="news__card">
-                    <img class="news__image" src="./assets/images/news2.png" alt="News image">
+                    <img class="news__image" src="./assets/images/news2.png" alt="News image" width="400px" height="264">
                     <h4 class="news__subtitle">Заголовок</h4>
                     <p class="news__description">ОписаниОписание Описание  Описание Описание Описание  Описаниее</p>
                 </div>
                 <div class="news__card">
-                    <img class="news__image" src="./assets/images/news3.png" alt="News image">
+                    <img class="news__image" src="./assets/images/news3.png" alt="News image" width="400px" height="264">
                     <h4 class="news__subtitle">Заголовок</h4>
                     <p class="news__description">ОписаниОписание Описание  Описание Описание Описание  Описаниее</p>
                 </div>
                 <div class="news__card">
-                    <img class="news__image" src="./assets/images/news4.png" alt="News image">
+                    <img class="news__image" src="./assets/images/news4.png" alt="News image" width="400px" height="264">
                     <h4 class="news__subtitle">Заголовок</h4>
                     <p class="news__description">ОписаниОписание Описание  Описание Описание Описание  Описаниее</p>
                 </div>
                 <div class="news__card">
-                    <img class="news__image" src="./assets/images/news5.png" alt="News image">
+                    <img class="news__image" src="./assets/images/news5.png" alt="News image" width="400px" height="264">
                     <h4 class="news__subtitle">Заголовок</h4>
                     <p class="news__description">ОписаниОписание Описание  Описание Описание Описание  Описаниее</p>
                 </div>
                 <div class="news__card">
-                    <img class="news__image" src="./assets/images/news6.png" alt="News image">
+                    <img class="news__image" src="./assets/images/news6.png" alt="News image" width="400px" height="264">
                     <h4 class="news__subtitle">Заголовок</h4>
                     <p class="news__description">ОписаниОписание Описание  Описание Описание Описание  Описаниее</p>
                 </div>
@@ -175,15 +175,13 @@
             <h2 class="subscribe__title">Подпишись</h2>
             <p class="subscribe__description">Отправляем анонсы новых статей, выпусков и трансляций</p>
             <form class="subscribe__form" type="submit" autocomplete="off">
-                <div class="subscribe__form_place">
-                    <input class="subscribe__form-input" type="email" name="email" placeholder="Email" required>
-                    <input class="subscribe__form-input" type="tel" name="tel" placeholder="Телефон" required>
+                    <div class="subscribe__form-wrapper">
+                        <input class="subscribe__form-input" type="email" name="email" placeholder="Email" required>
+                        <input class="subscribe__form-input" type="tel" name="tel" placeholder="Телефон" required>
+                        <input class="subscribe__form-input" type="date" name="date" placehodler="11.02.2022" required>
+                        <input class="subscribe__form-input" type="time" name="time" placeholder="15:00" required>
+                    </div>
                     <button class="subscribe__form-submit-btn" type="submit">Подписаться</button>   
-                </div>
-                <div class="subscribe__form_place">
-                    <input class="subscribe__form-input" type="date" name="date" placehodler="11.02.2022" required>
-                    <input class="subscribe__form-input" type="time" name="time" placeholder="15:00" required>
-                </div>
             </form>
         </section>
     </main>

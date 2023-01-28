@@ -30,12 +30,21 @@
         display: flex;
         gap: 140px;
         width: fit-content;
-        margin: 0 auto;
+        margin-left: 252px;
+
+        @media screen and (max-width: 1024px) {
+            margin-left: 152px;
+        }
+
+        @media screen and (max-width: 1024px) {
+            margin-left: 117px;
+        }
     }
 
     &__subnav-item {
         margin-bottom: 30px;
         transition: color 0.3s ease-in-out;
+        cursor: pointer;
 
         &:hover {
             color: var(--primary-hover-color);

@@ -4,10 +4,20 @@
     grid-template-columns: 0.15fr 1fr;
     gap: 100px;
 
+    @media screen and (max-width: 768px) {
+        padding: 100px 15px 80px;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
     &__title {
         font-size: 80px;
         line-height: 1.2;
         font-weight: 500;
+
+        @media screen and (max-width: 768px) {
+            font-size: 40px;
+        }
     }
 
     &__wrapper {
@@ -20,6 +30,10 @@
 
         &_active {
             border-top: 1px solid rgba(255, 255, 255, 1);
+        }
+
+        @media screen and (max-width: 768px) {
+            padding-bottom: 20px;
         }
     }
 
@@ -35,6 +49,14 @@
         transition: 0.4s;
         font-size: 24px;
         line-height: 1.5;
+
+        @media screen and (max-width: 768px) {
+            padding: 20px 0 0;
+
+            &_active {
+                padding-bottom: 20px;
+            }
+        }
 
         &_active {
             padding-bottom: 30px;

@@ -4,8 +4,20 @@
     display: flex;
     gap: 120px;
 
+    @media screen and (max-width: 900px) {
+        flex-direction: column;
+    }
+
+    @media screen and (max-width: 768px) {
+        padding: 80px 15px 160px;
+    }
+
     &__wrapper {
         max-width: 400px;
+
+        @media screen and (max-width: 768px) {
+            max-width: fit-content;
+        }
     }
 
     &__title {
@@ -34,5 +46,9 @@
         gap: 30px;
         align-items: center;
         height: fit-content;
+
+        @media screen and (max-width: 768px) {
+            justify-content: center;
+        }
     }
 }

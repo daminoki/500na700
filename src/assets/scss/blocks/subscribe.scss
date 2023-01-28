@@ -3,11 +3,20 @@
     color: var(--secondary-text-color);
     background-color: var(--secondary-bg-color);
 
+    @media screen and (max-width: 768px) {
+        padding: 30px 15px 65px;
+    }
+
     &__title {
         font-size: 80px;
         line-height: 1.2;
         font-weight: 500;
         margin-bottom: 30px;
+
+        @media screen and (max-width: 768px) {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
     }
 
     &__description {
@@ -19,13 +28,26 @@
 
     &__form {
         display: grid;
+        grid-template-rows: 2fr 1fr;
+        gap: 20px;
+
+        @media screen and (max-width: 900px) {
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+        }
+    }
+
+    &__form-wrapper {
+        display: grid;
         grid-template-columns: 400px 400px;
         gap: 20px;
 
-        &_place {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
+        @media screen and (max-width: 1024px) {
+            grid-template-columns: 350px 350px;
+        }
+
+        @media screen and (max-width: 900px) {
+            grid-template-columns: 1fr;
         }
     }
 
@@ -47,6 +69,7 @@
         border: 1px solid rgba(0, 0, 0, 0.4);
         border-radius: 10px;
         width: fit-content;
+        height: fit-content;
         transition: all 0.3s ease-in-out;
 
         &:hover {
