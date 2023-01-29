@@ -284,6 +284,7 @@ p, h1, h2, h3, h4, h5, h6 {
 .gallery__item > img {
     -o-object-fit: cover;
     object-fit: cover;
+    background-color: #B6B6B6;
 }
 
 @media screen and (max-width: 768px) {

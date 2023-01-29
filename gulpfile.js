@@ -14,6 +14,10 @@ const imagemin = require("gulp-imagemin")
 const del = require("del")
 const browserSync = require("browser-sync").create()
 const rigger = require("gulp-rigger")
+const rollup = require('gulp-better-rollup');
+const babel = require('rollup-plugin-babel');
+const resolve = require('rollup-plugin-node-resolve');
+const commonjs = require('rollup-plugin-commonjs');
 
 const srcPath = "src/"
 const distPath = "dist/"
@@ -28,7 +32,7 @@ const path = {
     src: {
         html: srcPath + "*.html",
         css: srcPath + "assets/scss/style.scss",
-        js: srcPath + "assets/js/main.js",
+        js: srcPath + "assets/js/**/*.js",
         images: srcPath + "assets/images/**/*.{jpeg,png,svg,gif,ico,webp,webmanifest,xml,json}",
     },
     watch: {
@@ -87,6 +91,7 @@ function css() {
 
 function js() {
     return src(path.src.js, { base: srcPath + "assets/js/" })
+        .pipe(rollup({ plugins: [babel(), resolve(), commonjs()] }, 'umd'))
         .pipe(plumber({
             errorHandler: function(err) {
                 notify.onError({

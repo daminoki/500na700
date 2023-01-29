@@ -2,6 +2,7 @@
     &__item {
         & > img {
             object-fit: cover;
+            background-color: #B6B6B6;
 
             @media screen and (max-width: 768px) {
                 border-radius: 10px;
