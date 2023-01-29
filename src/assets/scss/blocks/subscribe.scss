@@ -51,6 +51,11 @@
         }
     }
 
+    &__form-input-wrapper {
+        display: grid;
+        gap: 20px;
+    }
+
     &__form-input {
         padding: 15px 20px;
         border: 1px solid rgba(0, 0, 0, 0.4);
