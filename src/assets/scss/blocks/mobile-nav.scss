@@ -55,10 +55,37 @@
         cursor: pointer;
         margin-bottom: 20px;
         margin-left: auto;
+
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+
+    &__list {
+        margin-bottom: 40px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
 
     &__list-item {
         color: var(--primary-text-color);
         text-decoration: none;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    &__subnav {
+        display: none;
+        margin-top: 30px;
+        flex-direction: column;
+        gap: 30px;
+        font-size: 14px;
+        font-weight: 500;
+
+        &_opened {
+            display: flex;
+        }
     }
 }

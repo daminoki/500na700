@@ -186,9 +186,36 @@ p, h1, h2, h3, h4, h5, h6 {
     margin-left: auto;
 }
 
+.mobile-nav__close-btn:hover {
+    opacity: 0.5;
+}
+
+.mobile-nav__list {
+    margin-bottom: 40px;
+}
+
+.mobile-nav__list:last-child {
+    margin-bottom: 0;
+}
+
 .mobile-nav__list-item {
     color: var(--primary-text-color);
     text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.mobile-nav__subnav {
+    display: none;
+    margin-top: 30px;
+    flex-direction: column;
+    gap: 30px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.mobile-nav__subnav_opened {
+    display: flex;
 }
 
 .nav-list {
