@@ -32,7 +32,7 @@ const path = {
     src: {
         html: srcPath + "*.html",
         css: srcPath + "assets/scss/style.scss",
-        js: srcPath + "assets/js/**/*.js",
+        js: srcPath + "assets/js/main.js",
         images: srcPath + "assets/images/**/*.{jpeg,png,svg,gif,ico,webp,webmanifest,xml,json}",
     },
     watch: {
