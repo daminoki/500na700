@@ -73,7 +73,6 @@ function css() {
         .pipe(sass())
         .pipe(autoprefixer())
         .pipe(cssbeautify())
-        .pipe(dest(path.build.css))
         .pipe(cssnano({
             zindex: false,
             discardComments: {
@@ -102,7 +101,6 @@ function js() {
             }
         }))
         .pipe(rigger())
-        .pipe(dest(path.build.js))
         .pipe(uglify())
         .pipe(rename({
             suffix: ".min",
